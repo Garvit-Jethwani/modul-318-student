@@ -23,7 +23,8 @@ namespace SwissTransport.Core.Test
         public void SetUp()
         {
             _httpClient = new HttpClient();
-            _transport = new Transport(_httpClient);
+            _transport = new Transport();
+            _transport.SetClient(_httpClient);
         }
 
         [Test]
